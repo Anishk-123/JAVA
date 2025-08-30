@@ -1,16 +1,18 @@
-package Part2;
+package Pratice;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.util.Scanner;
 
 public class P1 {
     public static void main(String[] args) {
-        String s3="anishkbc";
-
-        Pattern h=Pattern.compile("[^abc]");
-        Matcher i=h.matcher(s3);
-        while(i.find()){
-            System.out.println(i.group());
+        Scanner sc1=new Scanner(System.in);
+        System.out.println("Enter a value ");
+        Long n=sc1.nextLong();
+        long sum=0;
+        while(n!=0){
+            long digit=n%10;
+            sum=sum+digit;
+            n=n/10;
         }
+        System.out.println(sum);
     }
 }
